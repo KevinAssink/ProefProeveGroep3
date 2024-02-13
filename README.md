@@ -6,20 +6,20 @@ Top Down 3D endless runner waar je coins en op pakt terwijl je voorwaarst blijft
   <li>Planning</li>
     <ul>
       <li><a href="https://trello.com/invite/b/pN6tEbCG/ATTI890300962e007b2909ba038b068e63d4C0BD6994/product-backlog">Trello</a></li>
-      <li><a href="/Documentatie/Product Backlog.docx">Product Backlog</a></li>
-      <li><a href="/Documentatie/Sprint Planning sprint 1.docx">Sprint 01</a></li>
+      <li><a href="/Documentatie/Product Backlog.pdf">Product Backlog</a></li>
+      <li><a href="/Documentatie/Sprint Planning sprint 1.pdf">Sprint 01</a></li>
     </ul>
   <li>Documenten</li>
     <ul>
-      <li><a href="/Documentatie/Algemene Notities.docx">Algemene Notities</a></li>
-      <li><a href="/Documentatie/Debriefing.docx">Debriefing / KickOff</a></li>
-      <li><a href="/Documentatie/Game Concept.docx">Game Concept</a></li>
-      <li><a href="/Documentatie/Game Scope.docx">Game Scope</a></li>
+      <li><a href="/Documentatie/Algemene Notities.pdf">Algemene Notities</a></li>
+      <li><a href="/Documentatie/Debriefing.pdf">Debriefing / KickOff</a></li>
+      <li><a href="/Documentatie/Game Concept.pdf">Game Concept</a></li>
+      <li><a href="/Documentatie/Game Scope.pdf">Game Scope</a></li>
     </ul>
   <li>Conventies</li>
     <ul>
-      <li><a href="/Documentatie/Pipeline.docx">Pipeline</a></li>
-      <li><a href="/Documentatie/Style guide.docx">Style Guide</a></li>
+      <li><a href="/Documentatie/Pipeline.pdf">Pipeline</a></li>
+      <li><a href="/Documentatie/Style guide.pdf">Style Guide</a></li>
     </ul>
 </ul></h3>
 
@@ -27,15 +27,15 @@ Top Down 3D endless runner waar je coins en op pakt terwijl je voorwaarst blijft
 <h3><ul>
   <li>Developers</li>
     <ul>
-      <li><a href="/Documentatie/Studenten/Olli Appelt/PlaceHolder.jpg">Olli Appelt</a></li>
-      <li><a href="/Documentatie/Studenten/Kevin Assink/PlaceHolder.jpg">Kevin Assink</a></li>
-      <li><a href="/Documentatie/Studenten/Thom Koper/PlaceHolder.jpg">Thom Koper</a></li>
+      <li><a href="/Documentatie/Studenten/Olli Appelt/PlaceHolder.pdf">Olli Appelt</a></li>
+      <li><a href="/Documentatie/Studenten/Kevin Assink/PlaceHolder.pdf">Kevin Assink</a></li>
+      <li><a href="/Documentatie/Studenten/Thom Koper/PlaceHolder.pdf">Thom Koper</a></li>
     </ul>
   <li>Artists
     <ul>
-      <li><a href="/Documentatie/Studenten/Ruben Ros/PlaceHolder.jpg">Ruben Ros</a></li>
-      <li><a href="/Documentatie/Studenten/Ihsan Topcuoglu/PlaceHolder.jpg">Ihsan Topcuoglu</a></li>
-      <li><a href="/Documentatie/Studenten/Ryan van Ingen/PlaceHolder.jpg">Ryan van Ingen</a></li>
-      <li><a href="/Documentatie/Studenten/Abdul Rocha/PlaceHolder.jpg">Abdul Rocha</a></li>
+      <li><a href="/Documentatie/Studenten/Ruben Ros/PlaceHolder.pdf">Ruben Ros</a></li>
+      <li><a href="/Documentatie/Studenten/Ihsan Topcuoglu/PlaceHolder.pdf">Ihsan Topcuoglu</a></li>
+      <li><a href="/Documentatie/Studenten/Ryan van Ingen/PlaceHolder.pdf">Ryan van Ingen</a></li>
+      <li><a href="/Documentatie/Studenten/Abdul Rocha/PlaceHolder.pdf">Abdul Rocha</a></li>
     </ul>
 </ul></h3>
