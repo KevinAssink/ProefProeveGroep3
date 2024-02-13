@@ -5,7 +5,7 @@ Top Down 3D endless runner waar je coins en op pakt terwijl je voorwaarst blijft
 <h3><ul>
   <li>Planning</li>
     <ul>
-      <li><a target="blank" href="https://trello.com/invite/b/pN6tEbCG/ATTI890300962e007b2909ba038b068e63d4C0BD6994/product-backlog">Trello</a></li>
+      <li><a href="https://trello.com/invite/b/pN6tEbCG/ATTI890300962e007b2909ba038b068e63d4C0BD6994/product-backlog" target="_blank">Trello</a></li>
       <li><a href="/Documentatie/Product Backlog.pdf">Product Backlog</a></li>
       <li><a href="/Documentatie/Sprint Planning sprint 1.pdf">Sprint 01</a></li>
 	  <li><a href="/Documentatie/Notule Sprint Planning 1.pdf">Notule Sprint 01</a></li>
