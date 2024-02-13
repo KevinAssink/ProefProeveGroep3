@@ -27,15 +27,15 @@ Top Down 3D endless runner waar je coins en op pakt terwijl je voorwaarst blijft
 <h3><ul>
   <li>Developers</li>
     <ul>
-      <li><a href="/Documentatie/Studenten/Olli Appelt/PlaceHolder.png">Olli Appelt</a></li>
-      <li><a href="/Documentatie/Studenten/Kevin Assink/PlaceHolder.png">Kevin Assink</a></li>
-      <li><a href="/Documentatie/Studenten/Thom Koper/PlaceHolder.png">Thom Koper</a></li>
+      <li><a href="/Documentatie/Studenten/Olli Appelt/PlaceHolder.jpg">Olli Appelt</a></li>
+      <li><a href="/Documentatie/Studenten/Kevin Assink/PlaceHolder.jpg">Kevin Assink</a></li>
+      <li><a href="/Documentatie/Studenten/Thom Koper/PlaceHolder.jpg">Thom Koper</a></li>
     </ul>
   <li>Artists
     <ul>
-      <li><a href="/Documentatie/Studenten/Ruben Ros/PlaceHolder.png">Ruben Ros</a></li>
-      <li><a href="/Documentatie/Studenten/Ihsan Topcuoglu/PlaceHolder.png">Ihsan Topcuoglu</a></li>
-      <li><a href="/Documentatie/Studenten/Ryan van Ingen/PlaceHolder.png">Ryan van Ingen</a></li>
-      <li><a href="/Documentatie/Studenten/Abdul Rocha/PlaceHolder.png">Abdul Rocha</a></li>
+      <li><a href="/Documentatie/Studenten/Ruben Ros/PlaceHolder.jpg">Ruben Ros</a></li>
+      <li><a href="/Documentatie/Studenten/Ihsan Topcuoglu/PlaceHolder.jpg">Ihsan Topcuoglu</a></li>
+      <li><a href="/Documentatie/Studenten/Ryan van Ingen/PlaceHolder.jpg">Ryan van Ingen</a></li>
+      <li><a href="/Documentatie/Studenten/Abdul Rocha/PlaceHolder.jpg">Abdul Rocha</a></li>
     </ul>
 </ul></h3>
