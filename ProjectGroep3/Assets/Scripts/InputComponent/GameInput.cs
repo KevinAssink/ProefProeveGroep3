@@ -28,7 +28,7 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             ""id"": ""17ecc800-783e-46a2-90ae-f296a0f3edba"",
             ""actions"": [
                 {
-                    ""name"": ""Swipe"",
+                    ""name"": ""TouchScreenPress"",
                     ""type"": ""Button"",
                     ""id"": ""e79f82c8-0594-43cf-b45a-1ac6bf41359d"",
                     ""expectedControlType"": ""Button"",
@@ -45,7 +45,7 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""TouchScreen"",
-                    ""action"": ""Swipe"",
+                    ""action"": ""TouchScreenPress"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -62,7 +62,7 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_Swipe = m_Player.FindAction("Swipe", throwIfNotFound: true);
+        m_Player_TouchScreenPress = m_Player.FindAction("TouchScreenPress", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -124,12 +124,12 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
-    private readonly InputAction m_Player_Swipe;
+    private readonly InputAction m_Player_TouchScreenPress;
     public struct PlayerActions
     {
         private @GameInput m_Wrapper;
         public PlayerActions(@GameInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Swipe => m_Wrapper.m_Player_Swipe;
+        public InputAction @TouchScreenPress => m_Wrapper.m_Player_TouchScreenPress;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -139,16 +139,16 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
-            @Swipe.started += instance.OnSwipe;
-            @Swipe.performed += instance.OnSwipe;
-            @Swipe.canceled += instance.OnSwipe;
+            @TouchScreenPress.started += instance.OnTouchScreenPress;
+            @TouchScreenPress.performed += instance.OnTouchScreenPress;
+            @TouchScreenPress.canceled += instance.OnTouchScreenPress;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
         {
-            @Swipe.started -= instance.OnSwipe;
-            @Swipe.performed -= instance.OnSwipe;
-            @Swipe.canceled -= instance.OnSwipe;
+            @TouchScreenPress.started -= instance.OnTouchScreenPress;
+            @TouchScreenPress.performed -= instance.OnTouchScreenPress;
+            @TouchScreenPress.canceled -= instance.OnTouchScreenPress;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -177,6 +177,6 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     }
     public interface IPlayerActions
     {
-        void OnSwipe(InputAction.CallbackContext context);
+        void OnTouchScreenPress(InputAction.CallbackContext context);
     }
 }

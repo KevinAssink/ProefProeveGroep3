@@ -6,7 +6,7 @@
             "id": "17ecc800-783e-46a2-90ae-f296a0f3edba",
             "actions": [
                 {
-                    "name": "Swipe",
+                    "name": "TouchScreenPress",
                     "type": "Button",
                     "id": "e79f82c8-0594-43cf-b45a-1ac6bf41359d",
                     "expectedControlType": "Button",
@@ -23,7 +23,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "TouchScreen",
-                    "action": "Swipe",
+                    "action": "TouchScreenPress",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

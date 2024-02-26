@@ -7,12 +7,13 @@ namespace Input
         //--------------------Private--------------------//
         private GameInput _gameInput;
 
-        private InputAction _swipeTest;
+        private InputAction _onTouchScreenPress;
+
         //--------------------Public--------------------//
-        public InputAction SwipeTest
+        public InputAction OnTouchScreenPress
         {
-            get => _swipeTest;
-            set => _swipeTest = value;
+            get => _onTouchScreenPress;
+            set => _onTouchScreenPress = value;
         }
 
         //--------------------Functions--------------------//
@@ -20,17 +21,11 @@ namespace Input
         {
             _gameInput = new GameInput();
 
-            _swipeTest = _gameInput.Player.Swipe;
+            _onTouchScreenPress = _gameInput.Player.TouchScreenPress;
         }
 
-        private void OnEnable()
-        {
-            _swipeTest.Enable();
-        }
+        private void OnEnable() => _onTouchScreenPress.Enable();
 
-        private void OnDisable()
-        {
-            _swipeTest.Disable();
-        }
+        private void OnDisable() => _onTouchScreenPress.Disable();
     }
 }
