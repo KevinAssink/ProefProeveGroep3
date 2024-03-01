@@ -51,16 +51,16 @@ Top Down 3D endless runner waar je coins en op pakt terwijl je voorwaarst blijft
 <h3><ul>
   <li>Developers</li>
     <ul>
-      <li><a href="/Documentatie/Studenten/Olli Appelt/PlaceHolder.jpg">Olli Appelt</a></li>
-      <li><a href="/Documentatie/Studenten/Kevin Assink/PlaceHolder.jpg">Kevin Assink</a></li>
-      <li><a href="/Documentatie/Studenten/Thom Koper/PlaceHolder.jpg">Thom Koper</a></li>
+      <li><a href="/Documentatie/Studenten/Olli Appelt/">Olli Appelt</a></li>
+      <li><a href="/Documentatie/Studenten/Kevin Assink/">Kevin Assink</a></li>
+      <li><a href="/Documentatie/Studenten/Thom Koper/">Thom Koper</a></li>
     </ul>
   <li>Artists
     <ul>
-      <li><a href="/Documentatie/Studenten/Ruben Ros/PlaceHolder.jpg">Ruben Ros</a></li>
-      <li><a href="/Documentatie/Studenten/Ihsan Topcuoglu/PlaceHolder.jpg">Ihsan Topcuoglu</a></li>
-      <li><a href="/Documentatie/Studenten/Ryan van Ingen/PlaceHolder.jpg">Ryan van Ingen</a></li>
-      <li><a href="/Documentatie/Studenten/Abdul Rocha/PlaceHolder.jpg">Abdul Rocha</a></li>
+      <li><a href="/Documentatie/Studenten/Ruben Ros/">Ruben Ros</a></li>
+      <li><a href="/Documentatie/Studenten/Ihsan Topcuoglu/">Ihsan Topcuoglu</a></li>
+      <li><a href="/Documentatie/Studenten/Ryan van Ingen/">Ryan van Ingen</a></li>
+      <li><a href="/Documentatie/Studenten/Abdul Rocha/">Abdul Rocha</a></li>
     </ul>
 </ul></h3>
 
