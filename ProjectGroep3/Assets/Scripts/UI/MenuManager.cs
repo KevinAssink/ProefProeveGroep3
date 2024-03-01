@@ -45,6 +45,14 @@ namespace MenuHandler
         {
             aMenu.CloseMenu();
         }
+
+        /// <summary>
+        /// Sluit de applicatie
+        /// </summary>
+        public void QuitApplication()
+        {
+            Application.Quit();
+        }
     }
 }
 
