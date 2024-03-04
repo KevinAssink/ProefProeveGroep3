@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
+    /// <summary>
+    /// This is one of the Object pooling scripts,which only handles the instanting
+    /// </summary>
+
+
     //-------------------Public-------------------//
 
     public static ObjectPool SharedInstance;

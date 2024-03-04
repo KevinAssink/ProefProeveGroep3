@@ -5,6 +5,10 @@ using UnityEngine.Rendering;
 
 public class TileGenerator : MonoBehaviour
 {
+    /// <summary>
+    /// This script activates the tiles via a generation point
+    /// </summary>
+    
     //-------------------Public-------------------//
 
     public GameObject TheTile;
@@ -21,7 +25,7 @@ public class TileGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        // this gets the width of said platform so that it should know when to spawn to next platform, so that they dont spawn in each other, but sadly the platforms do spawn in each other
         _platformWidth = TheTile.GetComponent<BoxCollider>().size.z;
         GameObject newTile = TheWorldPool.GetPooledObject();
         newTile.transform.position = new Vector3(_platformWidth, 0, 0); 

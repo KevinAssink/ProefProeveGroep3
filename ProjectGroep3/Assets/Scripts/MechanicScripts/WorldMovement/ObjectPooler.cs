@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class ObjectPooler : MonoBehaviour
 {
+    /// <summary>
+    /// This is one of the Object pooling scripts, this scripts also handles the spawning and respawning,
+    /// but in this script the "respawning" of the pooled doenst work.
+    /// </summary>
+
     [System.Serializable]
     public class Pool
     {
