@@ -1,4 +1,5 @@
 using ObstacleSpawning;
+using System.Collections;
 using UnityEngine;
 
 public class MovementTester : MonoBehaviour
@@ -6,9 +7,9 @@ public class MovementTester : MonoBehaviour
     [SerializeField]
     private float _speed;
 
-    private void Start()
+    private void OnEnable()
     {
-        Invoke(nameof(DespawnSelf), 5f);
+        StartCoroutine(DespawnSelf());
     }
 
     private void Update()
@@ -16,8 +17,10 @@ public class MovementTester : MonoBehaviour
         transform.position += Vector3.right * _speed * Time.deltaTime;    
     }
 
-    private void DespawnSelf()
+    private IEnumerator DespawnSelf()
     {
+        yield return new WaitForSeconds(5);
+        ObstacleRowManager.Instance.Rows.Remove(ObstacleRowManager.Instance.GetRowOfObject(gameObject));
         ObstacleSpawner.Instance.DeSpawnObstacle(gameObject);
     }
 }

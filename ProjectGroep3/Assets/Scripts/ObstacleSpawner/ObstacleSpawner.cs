@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Utilities;
 
 namespace ObstacleSpawning
 {
@@ -12,6 +13,12 @@ namespace ObstacleSpawning
         private List<GameObject> _activeObjects = new();
 
         [SerializeField]
+        private int _obstacleAmount;
+
+        [SerializeField]
+        private float _timeBetweenSpawns;
+
+        [SerializeField]
         private Transform _obstacleParent;
         [SerializeField]
         private Transform _leftSpawnTransform;
@@ -20,16 +27,17 @@ namespace ObstacleSpawning
         [SerializeField] 
         private Transform _rightSpawnTransform;
 
-        [SerializeField]
-        private int _obstacleAmount;
+        private ObstacleRowManager _rowManager;
 
         //--------------------Functions--------------------//
         private void Awake()
         {
             InstantiateObjectPool();
 
-            InvokeRepeating(nameof(SpawnObstacleRow), 0f, 2f);
+            InvokeRepeating(nameof(SpawnObstacleRow), 0f, _timeBetweenSpawns);
         }
+
+        private void Start() => _rowManager = ObstacleRowManager.Instance;
 
         private void InstantiateObjectPool()
         {
@@ -47,11 +55,15 @@ namespace ObstacleSpawning
             {
                 pooledObject.transform.SetParent(_obstacleParent);
             }
+
+            _objectPool.Shuffle();
         }
 
         private void SpawnObstacleRow()
         {
             Transform spawnTransform = null;
+            List<GameObject> spawnedObjects = new();
+
             for (int i = 0; i < 3; i++)
             {
                 int randomInterger = Random.Range(0, 2);
@@ -70,18 +82,37 @@ namespace ObstacleSpawning
 
                 if(randomInterger == 1)
                 {
-                    SpawnObstacle(spawnTransform);
+                    spawnedObjects.Add(SpawnObstacle(spawnTransform));
                 }
+            }
+
+            if(spawnedObjects.Count == 3 || spawnedObjects.Count == 0) 
+            {
+                foreach (GameObject spawnedObject in spawnedObjects)
+                {
+                    DeSpawnObstacle(spawnedObject);
+                }
+
+                SpawnObstacleRow();
+            }
+            else
+            {
+                _rowManager.Rows.Add(spawnedObjects);
             }
         }
 
-        private void SpawnObstacle(Transform spawnTransform)
+        private GameObject SpawnObstacle(Transform spawnTransform)
         {
+            if (_objectPool.Count == 0)
+                return null;
+
             GameObject spawnedObstacle = _objectPool[0];
             spawnedObstacle.transform.position = spawnTransform.position;
             spawnedObstacle.SetActive(true);
             _objectPool.Remove(spawnedObstacle);
             _activeObjects.Add(spawnedObstacle);
+
+            return spawnedObstacle;
         }
 
         public void DeSpawnObstacle(GameObject obstacle)

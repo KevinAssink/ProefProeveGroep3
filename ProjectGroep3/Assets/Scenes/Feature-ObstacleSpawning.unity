@@ -717,11 +717,12 @@ MonoBehaviour:
   - {fileID: 3997614948693869450, guid: cbca99fecb36cd7489daf511ae96ad83, type: 3}
   - {fileID: 8043606115063045470, guid: 02ee5a8707499ff46bdde5aa63908b97, type: 3}
   - {fileID: 6051734650055686818, guid: ec97fa3d5c567d34d997c60db2a91ca3, type: 3}
+  _obstacleAmount: 10
+  _timeBetweenSpawns: 0.6
   _obstacleParent: {fileID: 58575221}
   _leftSpawnTransform: {fileID: 1407979278}
   _middleSpawnTransform: {fileID: 1368628088}
   _rightSpawnTransform: {fileID: 1515601922}
-  _obstacleAmount: 10
 --- !u!1 &1085310824
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +779,7 @@ GameObject:
   - component: {fileID: 1367207664}
   - component: {fileID: 1367207663}
   m_Layer: 6
-  m_Name: zijkant (1)
+  m_Name: zijkant 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -953,12 +954,12 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 2055013491}
   - {fileID: 58575221}
+  - {fileID: 585600345}
+  - {fileID: 836340425}
   - {fileID: 1085310825}
   - {fileID: 945143104}
   - {fileID: 48451703}
   - {fileID: 940467150}
-  - {fileID: 585600345}
-  - {fileID: 836340425}
   - {fileID: 1407979278}
   - {fileID: 1368628088}
   - {fileID: 1515601922}
