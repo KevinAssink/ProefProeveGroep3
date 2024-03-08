@@ -1,0 +1,40 @@
+{
+    "name": "GameInput",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "17ecc800-783e-46a2-90ae-f296a0f3edba",
+            "actions": [
+                {
+                    "name": "TouchScreenPress",
+                    "type": "Button",
+                    "id": "e79f82c8-0594-43cf-b45a-1ac6bf41359d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0896f37a-92c1-4064-8a63-4395c5ea0c88",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TouchScreen",
+                    "action": "TouchScreenPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "TouchScreen",
+            "bindingGroup": "TouchScreen",
+            "devices": []
+        }
+    ]
+}
