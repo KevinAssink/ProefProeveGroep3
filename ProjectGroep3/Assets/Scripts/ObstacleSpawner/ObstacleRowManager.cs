@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,11 +16,6 @@ namespace ObstacleSpawning
         }
 
         //--------------------Functions--------------------//
-        private void Update()
-        {
-            Debug.Log(_rows.Count);
-        }
-
         /// <summary>
         /// Get the row(list of GameObjects) of the given GameObject
         /// </summary>

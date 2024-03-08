@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4456778926581476641}
   - component: {fileID: 5703569424856957612}
   - component: {fileID: 2310187497860473487}
-  - component: {fileID: -1868818458454883725}
   m_Layer: 6
   m_Name: Balls(cylinder)
   m_TagString: Untagged
@@ -108,16 +107,3 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &-1868818458454883725
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6051734650055686818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc5ed5453e4043a4280f1b5415add147, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 7

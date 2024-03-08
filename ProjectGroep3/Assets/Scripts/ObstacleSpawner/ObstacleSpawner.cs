@@ -1,3 +1,4 @@
+using StateMachineNameSpace;
 using System.Collections.Generic;
 using UnityEngine;
 using Utilities;
@@ -17,6 +18,7 @@ namespace ObstacleSpawning
 
         [SerializeField]
         private float _timeBetweenSpawns;
+        private float _timer;
 
         [SerializeField]
         private Transform _obstacleParent;
@@ -29,15 +31,30 @@ namespace ObstacleSpawning
 
         private ObstacleRowManager _rowManager;
 
-        //--------------------Functions--------------------//
-        private void Awake()
-        {
-            InstantiateObjectPool();
+        private StateMachine _statemachine;
 
-            InvokeRepeating(nameof(SpawnObstacleRow), 0f, _timeBetweenSpawns);
+        //--------------------Functions--------------------//
+        private void Awake() => InstantiateObjectPool();
+        
+        private void Start()
+        {
+            _rowManager = ObstacleRowManager.Instance;
+            _statemachine = StateMachine.Instance;
         }
 
-        private void Start() => _rowManager = ObstacleRowManager.Instance;
+        private void Update()
+        {
+            if(_statemachine._CurrentState == StateMachineState.GAME)
+            {
+                _timer += Time.deltaTime;
+
+                if (_timer >= _timeBetweenSpawns)
+                {
+                    SpawnObstacleRow();
+                    _timer = 0;
+                }
+            }
+        }
 
         private void InstantiateObjectPool()
         {
@@ -72,26 +89,23 @@ namespace ObstacleSpawning
                     case 0:
                         spawnTransform = _leftSpawnTransform;
                         break;
+
                     case 1:
                         spawnTransform = _middleSpawnTransform;
                         break;
+
                     case 2:
                         spawnTransform = _rightSpawnTransform;
                         break;
                 }
 
                 if(randomInterger == 1)
-                {
                     spawnedObjects.Add(SpawnObstacle(spawnTransform));
-                }
             }
 
-            if(spawnedObjects.Count == 3 || spawnedObjects.Count == 0) 
+            if (spawnedObjects.Count == 3 || spawnedObjects.Count == 0) 
             {
-                foreach (GameObject spawnedObject in spawnedObjects)
-                {
-                    DeSpawnObstacle(spawnedObject);
-                }
+                DeSpawnSpawnedRow(spawnedObjects);
 
                 SpawnObstacleRow();
             }
@@ -101,24 +115,35 @@ namespace ObstacleSpawning
             }
         }
 
+        private void DeSpawnSpawnedRow(List<GameObject> spawnedList)
+        {
+            foreach (GameObject spawnedObject in spawnedList)
+                DeSpawnObstacle(spawnedObject);
+        }
+
         private GameObject SpawnObstacle(Transform spawnTransform)
         {
             if (_objectPool.Count == 0)
                 return null;
 
             GameObject spawnedObstacle = _objectPool[0];
+
             spawnedObstacle.transform.position = spawnTransform.position;
+
             spawnedObstacle.SetActive(true);
+
             _objectPool.Remove(spawnedObstacle);
             _activeObjects.Add(spawnedObstacle);
 
             return spawnedObstacle;
         }
 
-        public void DeSpawnObstacle(GameObject obstacle)
+        private void DeSpawnObstacle(GameObject obstacle)
         {
             obstacle.SetActive(false);
+
             obstacle.transform.position = Vector3.zero;
+
             _activeObjects.Remove(obstacle);
             _objectPool.Add(obstacle);
         }
