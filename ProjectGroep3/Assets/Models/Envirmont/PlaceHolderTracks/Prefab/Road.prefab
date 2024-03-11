@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8470953678583288665}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071058, y: -0, z: -0, w: 0.70710784}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.001995, y: 0.001, z: 0.0019634354}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1973257153785052486}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4153066247705632713
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -117,12 +117,10 @@ GameObject:
   - component: {fileID: 1973257153785052486}
   - component: {fileID: 4570772054152979565}
   - component: {fileID: 6174180140830047966}
-  - component: {fileID: -8329274429117101928}
-  - component: {fileID: 4310750648181231587}
-  - component: {fileID: -1236340363666720352}
+  - component: {fileID: 2363099366962803137}
   m_Layer: 0
   m_Name: Road
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,14 +133,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8736543656817846766}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 7.499081, y: 0, z: 0}
-  m_LocalScale: {x: 198.44434, y: 297.45047, z: 198.4443}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3434641755819274943}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4570772054152979565
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -193,7 +191,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-8329274429117101928
+--- !u!114 &2363099366962803137
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,40 +200,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8736543656817846766}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9adf5bddac2f784abb2916ed80f78c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 88154f5c12bc13f4bb897f86ee8500d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileDestructionPoint: {fileID: 0}
---- !u!114 &4310750648181231587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8736543656817846766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f22532fb84a61b45b2283ab28d89b4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!65 &-1236340363666720352
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8736543656817846766}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.02, y: 0.02, z: 0.00035298977}
-  m_Center: {x: -3.846134e-24, y: 5.0412047e-19, z: -0.00036610482}
+  ScrollingMaterial: {fileID: 2100000, guid: 03c6852e271acbb43a2dbb8c8aae83c1, type: 2}
+  scrollSpeed: 5
