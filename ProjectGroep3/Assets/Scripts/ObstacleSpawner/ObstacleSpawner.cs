@@ -44,7 +44,7 @@ namespace ObstacleSpawning
 
         private void Update()
         {
-            if(_statemachine._CurrentState == StateMachineState.GAME)
+            if(_statemachine.CurrentState == StateMachineState.GAME)
             {
                 _timer += Time.deltaTime;
 
