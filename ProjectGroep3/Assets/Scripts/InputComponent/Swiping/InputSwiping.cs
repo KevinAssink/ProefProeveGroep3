@@ -1,4 +1,5 @@
 using Input;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
@@ -10,17 +11,10 @@ using UnityEngine.UI;
 public class InputSwiping : MonoBehaviour
 {
     [SerializeField]
-    private TMP_Text _readPages;
+    private GameObject _player;
     [SerializeField]
-    private TMP_Text _readStart;
-    [SerializeField]    
-    private TMP_Text _readEnd;
-    [SerializeField]
-    private Sprite _pageImage;
-    [SerializeField]
-    private List<Sprite> _numbers;
-    [SerializeField] 
-    private int _pageNumber;
+    private List<Transform> _lanePositions;
+    private int _laneNumber;
 
     private Vector2 _startTouchPosition;
     private Vector2 _endTouchPosition;
@@ -32,44 +26,39 @@ public class InputSwiping : MonoBehaviour
         SwipeRightTouch.OnTouchScreenPress.performed += BeganPress;
         SwipeRightTouch.OnTouchScreenPress.canceled += EndPress;
     }
-
-
     private void BeganPress(InputAction.CallbackContext context)
     {
         _startTouchPosition = InputComponent.Instance.OnScreenSwipeRight.ReadValue<Vector2>();
-        _readStart.text = _startTouchPosition.ToString();
     }
     private void EndPress(InputAction.CallbackContext context)
     {
         _endTouchPosition = InputComponent.Instance.OnScreenSwipeRight.ReadValue<Vector2>();
 
-        _readEnd.text = _endTouchPosition.ToString();
-
         float TempNumber = _endTouchPosition.x - _startTouchPosition.x; 
         if( TempNumber > 0)
         {
-            PreviousPage();
+            PreviousPos();
         }
         else
         {
-            NextPage();
+            NextPos();
         }
     }
     
-    private void NextPage()
+    private void NextPos()
     {
-        _pageNumber++;
-        _pageImage = _numbers[_pageNumber];
-
-        Debug.Log("Next Page" + _pageNumber);
-        _readPages.text = _pageNumber.ToString();
+        _laneNumber++;
+        if (_lanePositions.Count >= 3)
+        {
+            _laneNumber = 2;
+        }
     }
-    private void PreviousPage()
+    private void PreviousPos()
     {
-        _pageNumber--;
-        _pageImage = _numbers[_pageNumber];
-
-        Debug.Log("Previous Page" + _pageNumber);
-        _readPages.text = _pageNumber.ToString();
+        _laneNumber--;
+        if (_lanePositions.Count >= -1)
+        {
+            _laneNumber = 0;
+        }
     }
 }
