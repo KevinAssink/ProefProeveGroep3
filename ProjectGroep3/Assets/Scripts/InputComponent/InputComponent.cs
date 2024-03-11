@@ -1,6 +1,6 @@
 using UnityEngine.InputSystem;
 
-namespace Input
+namespace InputNameSpace
 {
     public class InputComponent : SingletonBehaviour<InputComponent>
     {
