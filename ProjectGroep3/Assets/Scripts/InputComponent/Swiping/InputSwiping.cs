@@ -14,10 +14,13 @@ public class InputSwiping : MonoBehaviour
     private GameObject _player;
     [SerializeField]
     private List<Transform> _lanePositions;
+    [SerializeField]
     private int _laneNumber;
 
     private Vector2 _startTouchPosition;
     private Vector2 _endTouchPosition;
+
+
 
     private void Start()
     {
@@ -48,6 +51,10 @@ public class InputSwiping : MonoBehaviour
     private void NextPos()
     {
         _laneNumber++;
+        int currentPage = _lanePositions.Count;
+        int nextPage = _lanePositions[(_lanePositions.IndexOf(currentPage) + 1) % _lanePositions.Count];
+        int prevPage = _lanePositions[(_lanePositions.IndexOf(currentPage) - 1 + _lanePositions.Count) % _lanePositions.Count];
+
         if (_lanePositions.Count >= 3)
         {
             _laneNumber = 2;
