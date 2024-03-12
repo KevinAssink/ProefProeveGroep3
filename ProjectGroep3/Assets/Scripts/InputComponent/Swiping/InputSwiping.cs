@@ -10,17 +10,24 @@ using UnityEngine.UI;
 
 public class InputSwiping : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject _player;
-    [SerializeField]
-    private List<Transform> _lanePositions;
-    [SerializeField]
-    private int _laneNumber;
-
+    //[SerializeField]
+    //private List<int> _lanePositions;
+    
+    //private int _laneNumber;
     private Vector2 _startTouchPosition;
     private Vector2 _endTouchPosition;
 
+    [SerializeField]
+    private List<Transform> _lanes = new();
+    //[SerializeField]
+    //private GameObject _player;
+    private Transform _currentLane;
 
+    private void Awake()
+    {
+        //_lanes = new();
+        _currentLane = _lanes[1];
+    }
 
     private void Start()
     {
@@ -37,35 +44,60 @@ public class InputSwiping : MonoBehaviour
     {
         _endTouchPosition = InputComponent.Instance.OnScreenSwipeRight.ReadValue<Vector2>();
 
-        float TempNumber = _endTouchPosition.x - _startTouchPosition.x; 
-        if( TempNumber > 0)
+        float TempNumber = _endTouchPosition.x - _startTouchPosition.x;
+
+        if ( TempNumber > 0)
         {
-            PreviousPos();
+            //PreviousPos();
+            SwitchLane(true);
         }
         else
         {
-            NextPos();
+            //NextPos();
+            SwitchLane(false);
         }
     }
-    
-    private void NextPos()
+    private void SwitchLane(bool _moveToRight)
     {
-        _laneNumber++;
-        int currentPage = _lanePositions.Count;
-        int nextPage = _lanePositions[(_lanePositions.IndexOf(currentPage) + 1) % _lanePositions.Count];
-        int prevPage = _lanePositions[(_lanePositions.IndexOf(currentPage) - 1 + _lanePositions.Count) % _lanePositions.Count];
+        int _currentIndex = _lanes.IndexOf(_currentLane);
 
+        if (_moveToRight && _currentIndex + 1 <= 3)
+        {
+            _currentLane = _lanes[_currentIndex + 1];
+            MoveToLane();
+        }
+        else if (!_moveToRight && _currentIndex - 1 >= 0)
+        {
+            _currentLane = _lanes[_currentIndex - 1];
+            MoveToLane();
+        }
+    }
+    private void MoveToLane()
+    {
+        //om smooth te maken, doen met lerp of slerp
+        transform.position = _currentLane.position;
+    }
+
+    /*private void NextPos()
+    {
+        int currentPos = _lanePositions.Count;
+        int nexPos = _lanePositions[(_lanePositions.IndexOf(currentPos) + 1) % _lanePositions.Count];     
+        
+        _laneNumber++;
         if (_lanePositions.Count >= 3)
         {
             _laneNumber = 2;
         }
-    }
-    private void PreviousPos()
+    }*/
+    /*private void PreviousPos()
     {
+        /*int currentPos = _lanePositions.Count;
+        int prevPos = _lanePositions[(_lanePositions.IndexOf(currentPos) - 1 + _lanePositions.Count) % _lanePositions.Count];
+
         _laneNumber--;
         if (_lanePositions.Count >= -1)
         {
             _laneNumber = 0;
         }
-    }
+    }*/
 }
