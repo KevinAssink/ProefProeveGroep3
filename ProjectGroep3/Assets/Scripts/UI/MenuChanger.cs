@@ -47,7 +47,8 @@ namespace MenuHandler
                     break;
 
                 case StateMachineState.GAME_OVER:
-                    _menuManager.OpenMenu(_gameOverMenu);
+                    _menuManager.OpenMenu(_gameMenu);
+                    _menuManager.OpenMenuNoClose(_gameOverMenu);
                     break;
             }
         }
