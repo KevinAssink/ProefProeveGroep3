@@ -17,9 +17,10 @@ namespace EnviromentSpawn
         [SerializeField]
         private int _amountOfObjectsToSpawn;
 
-        [SerializeField]
-        private float _timeBetweenSpawns;
         private float _timer;
+
+        [SerializeField]
+        private Vector2 _timeBetweenSpawns;
 
         [SerializeField]
         private Transform _parentTransform;
@@ -33,11 +34,40 @@ namespace EnviromentSpawn
         //--------------------Functions--------------------//
         private void Awake() => InstantiateObjectPool();
 
+        private void Start() => _stateMachine = StateMachine.Instance;
+
         private void Update()
         {
             if (_stateMachine.CurrentState == StateMachineState.GAME)
             {
-                
+                _timer += Time.deltaTime;
+
+                if (_timer >= Random.Range(_timeBetweenSpawns.x, _timeBetweenSpawns.y))
+                {
+                    SpawnEnviromentWave();
+                    _timer = 0;
+                }
+            }
+        }
+
+        private void SpawnEnviromentWave()
+        {
+            int randomIndex = Random.Range(0, 2);
+
+            for (int i = 0; i < 2; i++)
+            {
+                if(randomIndex == 1)
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            SpawnObject(_leftSpawnTransform);
+                            break;
+                        case 1:
+                            SpawnObject(_rightSpawnTransform);
+                            break;
+                    }
+                }
             }
         }
 
