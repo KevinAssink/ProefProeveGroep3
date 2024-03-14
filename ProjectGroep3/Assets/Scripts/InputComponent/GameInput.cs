@@ -35,6 +35,15 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SwipeRight"",
+                    ""type"": ""Value"",
+                    ""id"": ""7cb8cbb5-b3ef-4b50-8220-ec822c72cb56"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -46,6 +55,17 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""TouchScreen"",
                     ""action"": ""TouchScreenPress"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ed6510d1-b7d4-4b80-87ac-e0cf915f259f"",
+                    ""path"": ""<Touchscreen>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""TouchScreen"",
+                    ""action"": ""SwipeRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -63,6 +83,7 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_TouchScreenPress = m_Player.FindAction("TouchScreenPress", throwIfNotFound: true);
+        m_Player_SwipeRight = m_Player.FindAction("SwipeRight", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -125,11 +146,13 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_TouchScreenPress;
+    private readonly InputAction m_Player_SwipeRight;
     public struct PlayerActions
     {
         private @GameInput m_Wrapper;
         public PlayerActions(@GameInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @TouchScreenPress => m_Wrapper.m_Player_TouchScreenPress;
+        public InputAction @SwipeRight => m_Wrapper.m_Player_SwipeRight;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -142,6 +165,9 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             @TouchScreenPress.started += instance.OnTouchScreenPress;
             @TouchScreenPress.performed += instance.OnTouchScreenPress;
             @TouchScreenPress.canceled += instance.OnTouchScreenPress;
+            @SwipeRight.started += instance.OnSwipeRight;
+            @SwipeRight.performed += instance.OnSwipeRight;
+            @SwipeRight.canceled += instance.OnSwipeRight;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -149,6 +175,9 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
             @TouchScreenPress.started -= instance.OnTouchScreenPress;
             @TouchScreenPress.performed -= instance.OnTouchScreenPress;
             @TouchScreenPress.canceled -= instance.OnTouchScreenPress;
+            @SwipeRight.started -= instance.OnSwipeRight;
+            @SwipeRight.performed -= instance.OnSwipeRight;
+            @SwipeRight.canceled -= instance.OnSwipeRight;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -178,5 +207,6 @@ public partial class @GameInput: IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         void OnTouchScreenPress(InputAction.CallbackContext context);
+        void OnSwipeRight(InputAction.CallbackContext context);
     }
 }

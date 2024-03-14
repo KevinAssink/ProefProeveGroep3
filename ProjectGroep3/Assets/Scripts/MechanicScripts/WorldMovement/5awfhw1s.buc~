@@ -1,0 +1,52 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Numerics;
+using UnityEngine;
+using UnityEngine.Rendering.Universal;
+using Vector3 = UnityEngine.Vector3;
+
+
+
+namespace WorldMovement
+{
+    public class WorldMovement : MonoBehaviour
+    {
+
+
+        //-------------------Public-------------------//
+
+        public ObjectPool TheWorldPool;
+
+
+        //-------------------Private-------------------//
+
+        private GameObject _DestructionPoint;
+
+        //-------------------Functions-------------------//
+        private void Start()
+        {
+            _DestructionPoint = GameObject.Find("DestructionPoint");
+            TheWorldPool.GetComponent();
+           
+
+        }
+        private void Update()
+        {
+
+            transform.position += Vector3.left * Time.deltaTime;
+
+            if (transform.position.x < _DestructionPoint.transform.position.x)
+            {
+                TheWorldPool.ActivateNextObject();
+                gameObject.SetActive(false);
+            }
+
+        }
+
+
+
+
+    }
+
+
+}

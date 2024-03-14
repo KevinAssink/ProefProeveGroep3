@@ -13,6 +13,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "SwipeRight",
+                    "type": "Value",
+                    "id": "7cb8cbb5-b3ef-4b50-8220-ec822c72cb56",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -24,6 +33,17 @@
                     "processors": "",
                     "groups": "TouchScreen",
                     "action": "TouchScreenPress",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ed6510d1-b7d4-4b80-87ac-e0cf915f259f",
+                    "path": "<Touchscreen>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TouchScreen",
+                    "action": "SwipeRight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
