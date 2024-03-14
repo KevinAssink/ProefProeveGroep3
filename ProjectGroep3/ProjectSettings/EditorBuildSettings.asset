@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Swiping.unity
-    guid: 73031f64e0bfe084984caf202ff08bf8
+    path: Assets/Scenes/Feature-SocialLink.unity
+    guid: 09ea01f42e5fc534d909a114b5ce5943
   m_configObjects: {}
