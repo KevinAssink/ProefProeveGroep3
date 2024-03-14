@@ -11,6 +11,9 @@
         },
         {
             "m_Id": "8ebbffdf74334c0bb31ca829ccf4b0cd"
+        },
+        {
+            "m_Id": "eb632a796c3244ca83f1b762a4cf6e57"
         }
     ],
     "m_Keywords": [],
@@ -68,6 +71,9 @@
         },
         {
             "m_Id": "0fa80fa77d944b3798984700ca53bd4a"
+        },
+        {
+            "m_Id": "c32b8f97521e423087c7b4a9fde4105e"
         }
     ],
     "m_GroupDatas": [],
@@ -250,6 +256,9 @@
         },
         {
             "m_Id": "8ebbffdf74334c0bb31ca829ccf4b0cd"
+        },
+        {
+            "m_Id": "eb632a796c3244ca83f1b762a4cf6e57"
         }
     ]
 }
@@ -657,6 +666,21 @@
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Smooth Delta",
+    "m_StageCapability": 3,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.0,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "675c0fa525a8458ea2f373b252fc74c6",
+    "m_Id": 0,
+    "m_DisplayName": "ScrollingSpeedF",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
     "m_StageCapability": 3,
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
@@ -1272,6 +1296,42 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "c32b8f97521e423087c7b4a9fde4105e",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -1349.0,
+            "y": 469.0,
+            "width": 160.0,
+            "height": 34.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "675c0fa525a8458ea2f373b252fc74c6"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "eb632a796c3244ca83f1b762a4cf6e57"
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.SampleTexture2DNode",
     "m_ObjectId": "c88fcef363814626b08dbb6cbe2b24b4",
     "m_Group": {
@@ -1575,6 +1635,34 @@
         "y": 0.0
     },
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "eb632a796c3244ca83f1b762a4cf6e57",
+    "m_Guid": {
+        "m_GuidSerialized": "38e09751-ae46-479e-a063-35f68c58e7fe"
+    },
+    "m_Name": "ScrollingSpeedF",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "ScrollingSpeedF",
+    "m_DefaultReferenceName": "_ScrollingSpeedF",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 0.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
+    }
 }
 
 {

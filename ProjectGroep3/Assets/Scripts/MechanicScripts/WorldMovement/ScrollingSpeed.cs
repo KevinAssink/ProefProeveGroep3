@@ -5,7 +5,7 @@ using UnityEngine;
 public class Scrolling : MonoBehaviour
 {
     public Material ScrollingMaterial;
-    public Vector2 scrollSpeed;
+    public Vector3 scrollSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +15,6 @@ public class Scrolling : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ScrollingMaterial.SetVector("_ScrollSpeed", scrollSpeed);       
+        ScrollingMaterial.SetVector("_ScrollSpeed", scrollSpeed);
     }
 }
