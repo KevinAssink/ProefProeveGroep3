@@ -11,7 +11,7 @@ namespace StateMachineNameSpace
         private StateMachineState _currentState;
 
         //--------------------Public--------------------//
-        public StateMachineState _CurrentState => _currentState;
+        public StateMachineState CurrentState => _currentState;
 
         public Action<StateMachineState> OnStateSet;
 
