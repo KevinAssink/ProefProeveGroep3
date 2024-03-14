@@ -33,24 +33,22 @@ namespace MenuHandler
         {
             switch (changedState)
             {
-                case StateMachineState.MAIN_MENU:
-                    _menuManager.OpenMenu(_gameMenu);
-                    _menuManager.OpenMenuNoClose(_mainMenu);
-                    break;
-
-                case StateMachineState.GAME:
-                    _menuManager.OpenMenu(_gameMenu);
-                    break;
-
-                case StateMachineState.PAUSED:
-                    _menuManager.OpenMenu(_pauseMenu);
-                    break;
-
                 case StateMachineState.GAME_OVER:
                     _menuManager.OpenMenu(_gameMenu);
                     _menuManager.OpenMenuNoClose(_gameOverMenu);
                     break;
             }
         }
+
+        /// <summary>
+        /// sets the state to Game
+        /// </summary>
+        public void PlayGame() => _stateMachine.SetState(StateMachineState.GAME);
+
+        /// <summary>
+        /// sets the state to paused
+        /// </summary>
+        public void PauseGame() => _stateMachine.SetState(StateMachineState.GAME);
+
     }
 }

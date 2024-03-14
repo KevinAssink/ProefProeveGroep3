@@ -6,7 +6,7 @@ using StateMachineNameSpace;
 
 namespace EnviromentSpawn
 {
-    public class EnviromentSpawner : MonoBehaviour
+    public class EnviromentSpawner : SingletonBehaviour<EnviromentSpawner>
     {
         //--------------------Private--------------------//
         [SerializeField]
@@ -108,7 +108,11 @@ namespace EnviromentSpawn
             return spawnedObstacle;
         }
 
-        private void DeSpawnObject(GameObject obstacle)
+        /// <summary>
+        /// Puts the given gameobject in back into the object pool
+        /// </summary>
+        /// <param name="obstacle">object to "despawn"</param>
+        public void DeSpawnObject(GameObject obstacle)
         {
             obstacle.SetActive(false);
 

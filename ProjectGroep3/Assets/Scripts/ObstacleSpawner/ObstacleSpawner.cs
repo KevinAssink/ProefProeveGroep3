@@ -138,7 +138,11 @@ namespace ObstacleSpawning
             return spawnedObstacle;
         }
 
-        private void DeSpawnObstacle(GameObject obstacle)
+        /// <summary>
+        /// Puts the given gameobject in back into the object pool
+        /// </summary>
+        /// <param name="obstacle">object to "despawn"</param>
+        public void DeSpawnObstacle(GameObject obstacle)
         {
             obstacle.SetActive(false);
 
