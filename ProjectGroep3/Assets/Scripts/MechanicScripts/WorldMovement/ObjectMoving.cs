@@ -19,7 +19,7 @@ public class ObjectMoving : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = Scrolling.scrollSpeed.y;
+        speed = Scrolling.scrollSpeed.y + -3.5f;
         
     }
 
