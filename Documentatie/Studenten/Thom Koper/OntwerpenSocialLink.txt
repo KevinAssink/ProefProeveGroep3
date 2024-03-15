@@ -1,0 +1,9 @@
+Social link functioneel ontwerp:
+Zodra de speler af is gegaan komt er een knop met de optie: Share.
+Als de speler op de share knop drukt zal er een link aangemaakt worden en zal de game een bericht aanmaken.
+In dit bericht staat: I reached this highscore in synthwave outlaws! try and beat me! en dan highscore.
+Dit bericht kan je delen op social media
+
+Social link technisch ontwerp:
+voor deze social link hebben we een plugin nodig die de meeste back end doet voor ons. 
+Dit is de native share plugin.

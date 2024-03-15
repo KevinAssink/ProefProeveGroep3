@@ -1,0 +1,8 @@
+Score counter functioneel ontwerp:
+voor het optellen en bijhouden van de scoren hebben we een script die dat bijhoud.
+Dit script pakt de tijd dat de speler levend is en doet het x een bepaalde multiplier wat de score bepaalt.
+Zodra de speler dood gaat en de score is beter dan de highscore, word deze de nieuwe highscore
+
+score counter technisch ontwerp:
+Om op te slaan tussen sessie's wat de speler's highscore is gaan we playerprefs gebruiken van unity.
+het score script is een singleton die altijd aan staat tijdens de GAME state.
